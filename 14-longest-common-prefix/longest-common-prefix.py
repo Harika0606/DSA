@@ -1,0 +1,9 @@
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        prefix=strs[0]
+        for i in strs[1:]:
+            while i[:len(prefix)]!=prefix:
+                prefix=prefix[:-1]
+        return prefix
+        
+        
